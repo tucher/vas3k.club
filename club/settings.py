@@ -253,10 +253,10 @@ VIDEO_EXTENSIONS = {"mp4", "mov", "webm"}
 IMAGE_EXTENSIONS = {"jpg", "jpeg", "png", "gif"}
 
 OG_IMAGE_GENERATOR_URL = "https://og.vas3k.club/preview"
-OG_IMAGE_DEFAULT = "https://vas3k.club/static/images/share.png"
-OG_MACHINE_AUTHOR_LOGO = "https://vas3k.club/static/images/the_machine_logo.png"
+OG_IMAGE_DEFAULT = f"{APP_HOST}/static/images/share.png"
+OG_MACHINE_AUTHOR_LOGO = f"{APP_HOST}/static/images/the_machine_logo.png"
 OG_IMAGE_GENERATOR_DEFAULTS = {
-    "logo": "https://vas3k.club/static/images/logo/logo-white-text.png",
+    "logo": f"{APP_HOST}/static/images/logo/logo-white-text.png",
     "op": 0.6,
     "bg": "#FFFFFF",
 }
@@ -304,11 +304,11 @@ CLEARED_POST_TEXT = "```\n" \
 MODERATOR_USERNAME = "moderator"
 DELETED_USERNAME = "deleted"
 
-VALUES_GUIDE_URL = "https://vas3k.club/post/values/"
-POSTING_GUIDE_URL = "https://vas3k.club/post/10447/"
-CHATS_GUIDE_URL = "https://vas3k.club/post/9542/"
-PEOPLE_GUIDE_URL = "https://vas3k.club/post/2584/"
-PARLIAMENT_GUIDE_URL = "https://vas3k.club/post/12870/"
+VALUES_GUIDE_URL = f"{APP_HOST}/post/values/"
+POSTING_GUIDE_URL = f"{APP_HOST}/post/10447/"
+CHATS_GUIDE_URL = f"{APP_HOST}/post/9542/"
+PEOPLE_GUIDE_URL = f"{APP_HOST}/post/2584/"
+PARLIAMENT_GUIDE_URL = f"{APP_HOST}/post/12870/"
 
 WEBPACK_LOADER = {
     "DEFAULT": {

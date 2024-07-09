@@ -9,6 +9,8 @@ from comments.models import Comment
 from posts.models.post import Post
 from users.models.user import User
 
+from django.conf import settings
+
 COMMENT_EMOJI_RE = re.compile(r"^💬.*")
 POST_EMOJI_RE = re.compile(r"^[📝🔗❓💡🏢🤜🤛🗺🗄🔥🏗🙋‍♀️].*")
 
@@ -50,7 +52,7 @@ def get_club_user(update: Update):
             update.callback_query.answer(text=f"☝️ Привяжи бота к профилю, братишка")
         else:
             update.message.reply_text(
-                f"😐 Привяжи <a href=\"https://vas3k.club/user/me/edit/bot/\">бота</a> к профилю, братишка",
+                f"😐 Привяжи <a href=\"{settings.APP_HOST}/user/me/edit/bot/\">бота</a> к профилю, братишка",
                 parse_mode=ParseMode.HTML
             )
         return None

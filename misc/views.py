@@ -14,6 +14,7 @@ from misc.models import NetworkGroup
 from users.models.achievements import Achievement, UserAchievement
 from users.models.user import User
 
+from django.conf import settings
 
 @require_auth
 def stats(request):
@@ -103,8 +104,8 @@ def network(request):
 def robots(request):
     lines = [
         "User-agent: *",
-        "Sitemap: https://vas3k.club/sitemap.xml",
-        "Host: https://vas3k.club",
+        f"Sitemap: {settings.APP_HOST}/sitemap.xml",
+        f"Host: {settings.APP_HOST}",
         "Disallow: /intro/",
         "Disallow: /user/",
         "Disallow: /people/",
